@@ -57,3 +57,13 @@ import {ReactQueryDevtools} from "@tanstack/react-query-devtools"
 <ReactQueryDevtools initialIsOpen={false}/>
 
 ---
+
+STEP:6 STALE TIME
+
+It is use to send request to the server after specific time else get from catch
+
+const {data,isPending, isError , error}= useQuery({ 
+  queryKey:['userData'],
+  queryFn: getUserData
+  staleTime:4000 //4s
+})
