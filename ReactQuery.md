@@ -67,3 +67,27 @@ const {data,isPending, isError , error}= useQuery({
   queryFn: getUserData
   staleTime:4000 //4s
 })
+
+---
+
+useMutation:
+It is used to delete , put or petch data from database . you should not use "useQuery" Fn to delete or update data form database
+
+Syntax:
+useMutation({
+  mutationFn : (data)=><userDefineFn>
+})
+
+how to use:
+const queryClient = useQueryClient(); //get access of catch memory
+
+const deleteMutaion=useMutation({
+  mutationFn : (id)=> deletePost(id); 
+  onSuccess:(data,id)=>{
+    queryClient.setQueryData(['post',pageNumber], (element)=>{ //change data of catch memory
+      return element.filter((postID)=> postID != id))}
+  }
+})
+
+onclick={()=>deleteMutaion.mutate(id)} // to call mutete function
+
