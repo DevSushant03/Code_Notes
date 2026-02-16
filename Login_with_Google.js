@@ -210,4 +210,29 @@ export const hashToken = (token) => {
 };
 
 
+//FLOW
+Frontend (3000)
+    ↓
+GET /auth/google
+    ↓
+Passport builds Google URL
+    ↓
+Google login screen
+    ↓
+Google redirects to:
+    /auth/google/callback?code=abc
+    ↓
+Passport verifies code
+    ↓
+GoogleStrategy runs
+    ↓
+User found / created
+    ↓
+createSessionForUser()
+    ↓
+Set HTTP-only cookies
+    ↓
+Redirect to frontend
+
+
 
