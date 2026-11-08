@@ -7,7 +7,7 @@ Ek baar ka account setup (Part 1) ke baad, har naye extension ke liye sirf Part 
 ## PART 1: One-time Account Setup (sirf pehli baar)
 
 1. **Publisher banao:** marketplace.visualstudio.com/manage -> Microsoft account se login -> Create publisher
-   - Name: kuch bhi. **ID: lowercase, no space, baad me change nahi hoti** (jaise `devsushant03`)
+   - Name: kuch bhi. **ID: lowercase, no space, baad me change nahi hoti**
    - Baaki fields optional
 2. **Token (PAT):** dev.azure.com -> User settings -> Personal access tokens (sirf `vsce publish` ke liye chahiye)
    - Organization: All accessible organizations, Scope: Marketplace -> Manage
@@ -65,7 +65,7 @@ code --extensionDevelopmentPath="C:\path\to\project"
   "displayName": "My Extension",
   "description": "Ek line me kya karta hai",
   "version": "0.0.1",
-  "publisher": "devsushant03",
+  "publisher": "<id>",
   "license": "MIT",
   "icon": "images/icon.png",
   "repository": { "type": "git", "url": "https://github.com/USER/REPO" },
